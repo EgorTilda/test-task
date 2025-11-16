@@ -239,10 +239,13 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1920 / 850;
+  min-height: 500px;
+  height: 100vh;
+  max-height: 700px;
 
   &__media,
   &__inner {
+    height: 100%;
     grid-area: 1 / 1;
   }
 
@@ -254,7 +257,6 @@ body {
   }
 
   &__inner {
-    height: 100%;
     z-index: 1;
     align-self: center;
     padding-top: 10.5rem;
