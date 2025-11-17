@@ -197,6 +197,13 @@ body {
     overflow: auto;
   }
 }
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
 // Typography
 h2 {
   text-transform: uppercase;
@@ -690,6 +697,7 @@ h2 {
 .range-field {
   &__input {
     width: 100%;
+    cursor: pointer;
   }
   &__label-row {
     display: flex;
