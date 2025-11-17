@@ -8,6 +8,8 @@ npm i
 npm start
 
 npm run build
+
+./public - сборка
 ```
 
 ## В проекте использован Gulp и SASS (SCSS):
