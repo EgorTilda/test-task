@@ -5,6 +5,7 @@ import notify from 'gulp-notify';
 import autoprefixer from 'gulp-autoprefixer'; 
 import groupmedia from 'gulp-group-css-media-queries';
 import gulpsass from 'gulp-sass';
+import cssmin from 'gulp-csso';
 import * as dartSass from 'sass';
 import plumber from 'gulp-plumber';
 
@@ -26,6 +27,7 @@ const scss = () => {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(groupmedia())
+    .pipe(cssmin())
     .pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}))
 }
 

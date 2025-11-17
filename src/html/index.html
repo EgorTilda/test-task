@@ -4,16 +4,18 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="" />
+
+     <meta name="description" content="Test Task: description" />
      <meta name="robots" content="noindex, nofollow">
-     <title>Gulp Base</title>
+
+     <title>Test Task</title>
      <link rel="icon" href="./img/favicon.svg">
      <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="layout">
 
-     <header class="header">
+     <header class="header" id="page-header">
           <div class="header__inner container">
                <a href="/" class="header__logo logo">
                     <picture>
@@ -36,6 +38,18 @@
                          Оформить заказ
                     </a>
                </nav>
+
+               <button 
+                    class="burger" 
+                    id="toggle-menu" 
+                    aria-label="Открыть меню"
+                    aria-controls="mobile-menu" 
+                    aria-expanded="false">
+
+                    <span class="burger__line burger__line--top" aria-hidden="true"></span>
+                    <span class="burger__line burger__line--middle" aria-hidden="true"></span>
+                    <span class="burger__line burger__line--bottom" aria-hidden="true"></span>
+               </button>
           </div>
      </header>
 
@@ -43,8 +57,9 @@
 
           <section class="hero">
                <picture class="hero__media">
-                    <source srcset="./img/hero.webp" type="image/webp">
-                    <img class="hero__bg" src="./img/hero.jpg" alt="" width="1920" height="850" fetchpriority="high"
+                    <source srcset="./img/hero-mobile.webp" media="(max-width: 488px)">
+                    <source srcset="./img/hero-tablet.webp" media="(max-width: 768px)">
+                    <img class="hero__bg" src="./img/hero.webp" alt="" width="1920" height="850" fetchpriority="high"
                          aria-hidden="true">
                </picture>
 
@@ -175,7 +190,10 @@
                          </div>
 
                          <div class="file-field" data-form="file">
-                              <label class="btn btn--white btn--border file-field__label" for="file-field">Прикрепить файл</label>
+                              <label class="btn btn--white btn--border file-field__label" for="file-field">
+                                   <img class="btn__icon" src="./img/icon/file-btn.svg" aria-hidden="true" alt="" width="20" height="20" loading="lazy">
+                                   Прикрепить файл
+                              </label>
                               <input
                                    class="file-field__input"
                                    id="file-field"
@@ -194,6 +212,23 @@
           </section>
 
      </main>
+
+     <div class="mobile-menu" id="mobile-menu">
+          <nav class="nav nav--col">
+               <a href="/" class="nav__link nav__link--active">
+                    Бизнес
+               </a>
+               <a href="/" class="nav__link">
+                    О нас
+               </a>
+               <a href="/" class="nav__link">
+                    Цены
+               </a>
+               <a href="/" class="nav__link">
+                    Оформить заказ
+               </a>
+          </nav>
+     </div>
 
      <footer class="footer">
           <div class="footer__inner container">
