@@ -174,7 +174,7 @@ body {
 .bold-text {
   font-weight: 700;
 }
-.icon-link {
+.icon-group {
   display: flex;
   align-items: center;
   gap: .5rem;
@@ -184,11 +184,6 @@ body {
   &__icon {
     max-width: 1.25rem;
     aspect-ratio: 1 / 1;
-  }
-  @media  (any-hover: hover) {
-    &:hover {
-      color: var(--primary-color);
-    }
   }
 }
 .no-scroll {
@@ -816,5 +811,12 @@ h2 {
 .payments {
   @media screen and (max-width: 576px) {
       flex-direction: column;
+  }
+}
+.social {
+   @media  (any-hover: hover) {
+    &__item:hover {
+      color: var(--primary-color);
+    }
   }
 }
